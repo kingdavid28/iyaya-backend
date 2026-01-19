@@ -237,6 +237,10 @@ const mountRoutes = () => {
     apiRouter.use('/privacy', require('./routes/privacy'));
     apiRouter.use('/payments', require('./routes/paymentRoutes'));
     apiRouter.use('/admin', require('./routes/adminRoutes'));
+    
+    // Solana & Points routes (Week 3-5 features)
+    apiRouter.use('/points', require('./routes/pointsRoutes'));
+    apiRouter.use('/solana', require('./routes/solanaRoutes'));
     apiRouter.use(
       '/availability',
       authenticate,
